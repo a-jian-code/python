@@ -1,0 +1,2856 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <!-- Start book Python基础 -->
+<!-- Start book Python基础 -->
+    <head>
+        <!-- head:start -->
+<!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>base64编码 | Python基础</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        <meta name="author" content="姜伟">
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-prism/prism.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../chapter15/section02.html" />
+    
+    
+    <link rel="prev" href="../chapter15/index.html" />
+    
+
+        <!-- head:end -->
+<!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+<!-- body:start -->
+        
+    <div class="book"
+        data-level="15.1"
+        data-chapter-title="base64编码"
+        data-filepath="chapter15/section01.md"
+        data-basepath=".."
+        data-revision="Tue Sep 08 2020 22:15:20 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="chapter01/index.html">
+            
+                
+                    <a href="../chapter01/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Python介绍
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="chapter01/section01.html">
+            
+                
+                    <a href="../chapter01/section01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        计算机的组成
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="chapter01/section02.html">
+            
+                
+                    <a href="../chapter01/section02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        编程语言介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="chapter01/section03.html">
+            
+                
+                    <a href="../chapter01/section03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        Python语言介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="chapter01/section04.html">
+            
+                
+                    <a href="../chapter01/section04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        Python安装配置
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="chapter01/section05.html">
+            
+                
+                    <a href="../chapter01/section05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        开发工具的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="chapter01/section06.html">
+            
+                
+                    <a href="../chapter01/section06.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                        Pycharm的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="chapter01/section07.html">
+            
+                
+                    <a href="../chapter01/section07.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.7.</b>
+                        
+                        Python交互式编程
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="chapter02/index.html">
+            
+                
+                    <a href="../chapter02/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        变量和数据类型
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="chapter02/section01.html">
+            
+                
+                    <a href="../chapter02/section01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        注释的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="chapter02/section02.html">
+            
+                
+                    <a href="../chapter02/section02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        变量以及数据类型
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="chapter02/section03.html">
+            
+                
+                    <a href="../chapter02/section03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        标识符及关键字
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="chapter02/section04.html">
+            
+                
+                    <a href="../chapter02/section04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        输出语句
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="chapter02/section05.html">
+            
+                
+                    <a href="../chapter02/section05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        输入语句
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="chapter02/section06.html">
+            
+                
+                    <a href="../chapter02/section06.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        类型转换
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="chapter03/index.html">
+            
+                
+                    <a href="../chapter03/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        运算符
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="chapter03/section01.html">
+            
+                
+                    <a href="../chapter03/section01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        算数运算符
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="chapter03/section02.html">
+            
+                
+                    <a href="../chapter03/section02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        赋值运算符
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="chapter03/section03.html">
+            
+                
+                    <a href="../chapter03/section03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        比较运算符
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="chapter03/section04.html">
+            
+                
+                    <a href="../chapter03/section04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        逻辑运算符
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="chapter03/section05.html">
+            
+                
+                    <a href="../chapter03/section05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        位运算符
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="chapter03/section06.html">
+            
+                
+                    <a href="../chapter03/section06.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.</b>
+                        
+                        运算符优先级
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="chapter04/index.html">
+            
+                
+                    <a href="../chapter04/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        流程控制语句
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="chapter04/section01/index.html">
+            
+                
+                    <a href="../chapter04/section01/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        条件判断语句
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="chapter04/section01/p01.html">
+            
+                
+                    <a href="../chapter04/section01/p01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.1.</b>
+                        
+                        if语句的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="chapter04/section01/p02.html">
+            
+                
+                    <a href="../chapter04/section01/p02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.2.</b>
+                        
+                        if...else语句的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="chapter04/section01/p03.html">
+            
+                
+                    <a href="../chapter04/section01/p03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.3.</b>
+                        
+                        if...elif...elif...else语句的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="chapter04/section01/p04.html">
+            
+                
+                    <a href="../chapter04/section01/p04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.4.</b>
+                        
+                        if语句的嵌套
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5" data-path="chapter04/section01/p05.html">
+            
+                
+                    <a href="../chapter04/section01/p05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.5.</b>
+                        
+                        if语句练习
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.6" data-path="chapter04/section01/p06.html">
+            
+                
+                    <a href="../chapter04/section01/p06.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.6.</b>
+                        
+                        if注意事项
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="chapter04/section02/index.html">
+            
+                
+                    <a href="../chapter04/section02/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        循环语句
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.2.1" data-path="chapter04/section02/p01.html">
+            
+                
+                    <a href="../chapter04/section02/p01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.1.</b>
+                        
+                        while循环的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.2" data-path="chapter04/section02/p02.html">
+            
+                
+                    <a href="../chapter04/section02/p02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.2.</b>
+                        
+                        break和continue关键字的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.3" data-path="chapter04/section02/p03.html">
+            
+                
+                    <a href="../chapter04/section02/p03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.3.</b>
+                        
+                        循环嵌套
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.4" data-path="chapter04/section02/p04.html">
+            
+                
+                    <a href="../chapter04/section02/p04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.4.</b>
+                        
+                        for循环的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.5" data-path="chapter04/section02/p05.html">
+            
+                
+                    <a href="../chapter04/section02/p05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.5.</b>
+                        
+                        循环配合if的使用
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="chapter05/index.html">
+            
+                
+                    <a href="../chapter05/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        字符串列表元组字典集合
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="chapter05/section01/index.html">
+            
+                
+                    <a href="../chapter05/section01/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        字符串的介绍
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="chapter05/section01/p01.html">
+            
+                
+                    <a href="../chapter05/section01/p01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.1.</b>
+                        
+                        字符串的输入输出
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="chapter05/section01/p02.html">
+            
+                
+                    <a href="../chapter05/section01/p02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.2.</b>
+                        
+                        字符串的下标和切片
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.3" data-path="chapter05/section01/p03.html">
+            
+                
+                    <a href="../chapter05/section01/p03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.3.</b>
+                        
+                        字符串的常见操作
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="chapter05/section02/index.html">
+            
+                
+                    <a href="../chapter05/section02/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        列表的介绍
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.2.1" data-path="chapter05/section02/p01.html">
+            
+                
+                    <a href="../chapter05/section02/p01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.1.</b>
+                        
+                        列表的增删改查
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.2" data-path="chapter05/section02/p02.html">
+            
+                
+                    <a href="../chapter05/section02/p02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.2.</b>
+                        
+                        遍历列表
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.3" data-path="chapter05/section02/p03.html">
+            
+                
+                    <a href="../chapter05/section02/p03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.3.</b>
+                        
+                        列表嵌套
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="chapter05/section03.html">
+            
+                
+                    <a href="../chapter05/section03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        元组的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="chapter05/section04/index.html">
+            
+                
+                    <a href="../chapter05/section04/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.</b>
+                        
+                        字典的介绍
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.4.1" data-path="chapter05/section04/p01.html">
+            
+                
+                    <a href="../chapter05/section04/p01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.1.</b>
+                        
+                        字典的增删改查
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4.2" data-path="chapter05/section04/p02.html">
+            
+                
+                    <a href="../chapter05/section04/p02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.2.</b>
+                        
+                        字典的遍历
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="chapter05/section05.html">
+            
+                
+                    <a href="../chapter05/section05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.5.</b>
+                        
+                        set的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.6" data-path="chapter05/section06.html">
+            
+                
+                    <a href="../chapter05/section06.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.6.</b>
+                        
+                        公共方法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.7" data-path="chapter05/section07.html">
+            
+                
+                    <a href="../chapter05/section07.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.7.</b>
+                        
+                        str.format方法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.8" data-path="chapter05/section08.html">
+            
+                
+                    <a href="../chapter05/section08.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.8.</b>
+                        
+                        列表推导式
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="chapter06/index.html">
+            
+                
+                    <a href="../chapter06/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        函数的使用
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="chapter06/section01/index.html">
+            
+                
+                    <a href="../chapter06/section01/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        函数基础
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="chapter06/section01/p01.html">
+            
+                
+                    <a href="../chapter06/section01/p01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.1.</b>
+                        
+                        函数的定义和调用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.2" data-path="chapter06/section01/p02.html">
+            
+                
+                    <a href="../chapter06/section01/p02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.2.</b>
+                        
+                        函数的参数
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.3" data-path="chapter06/section01/p03.html">
+            
+                
+                    <a href="../chapter06/section01/p03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.3.</b>
+                        
+                        函数的返回值
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.4" data-path="chapter06/section01/p04.html">
+            
+                
+                    <a href="../chapter06/section01/p04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.4.</b>
+                        
+                        函数的嵌套调用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.5" data-path="chapter06/section01/p05.html">
+            
+                
+                    <a href="../chapter06/section01/p05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.5.</b>
+                        
+                        函数的文档注释
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="chapter06/section02.html">
+            
+                
+                    <a href="../chapter06/section02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        函数应用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="chapter06/section03/index.html">
+            
+                
+                    <a href="../chapter06/section03/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.</b>
+                        
+                        函数高级
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.3.1" data-path="chapter06/section03/p01.html">
+            
+                
+                    <a href="../chapter06/section03/p01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.1.</b>
+                        
+                        局部变量
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.2" data-path="chapter06/section03/p02.html">
+            
+                
+                    <a href="../chapter06/section03/p02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.2.</b>
+                        
+                        全局变量
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.3" data-path="chapter06/section03/p03.html">
+            
+                
+                    <a href="../chapter06/section03/p03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.3.</b>
+                        
+                        函数返回值详解
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.4" data-path="chapter06/section03/p04.html">
+            
+                
+                    <a href="../chapter06/section03/p04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.4.</b>
+                        
+                        函数参数详解
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.5" data-path="chapter06/section03/p05.html">
+            
+                
+                    <a href="../chapter06/section03/p05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.5.</b>
+                        
+                        拆包
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.6" data-path="chapter06/section03/p06.html">
+            
+                
+                    <a href="../chapter06/section03/p06.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.6.</b>
+                        
+                        引用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.7" data-path="chapter06/section03/p07.html">
+            
+                
+                    <a href="../chapter06/section03/p07.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.7.</b>
+                        
+                        可变数据类型和不可变数据类型
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.8" data-path="chapter06/section03/p08.html">
+            
+                
+                    <a href="../chapter06/section03/p08.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.8.</b>
+                        
+                        参数的值传递
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="chapter06/section04.html">
+            
+                
+                    <a href="../chapter06/section04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.4.</b>
+                        
+                        递归函数
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="chapter06/section05.html">
+            
+                
+                    <a href="../chapter06/section05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.5.</b>
+                        
+                        匿名函数
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="chapter06/section06.html">
+            
+                
+                    <a href="../chapter06/section06.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.6.</b>
+                        
+                        高阶函数
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.7" data-path="chapter06/section07.html">
+            
+                
+                    <a href="../chapter06/section07.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.7.</b>
+                        
+                        闭包
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.8" data-path="chapter06/section08.html">
+            
+                
+                    <a href="../chapter06/section08.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.8.</b>
+                        
+                        装饰器
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.9" data-path="chapter06/section09.html">
+            
+                
+                    <a href="../chapter06/section09.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.9.</b>
+                        
+                        函数综合练习
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="chapter07/index.html">
+            
+                
+                    <a href="../chapter07/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        文件操作
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1" data-path="chapter07/section01.html">
+            
+                
+                    <a href="../chapter07/section01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.1.</b>
+                        
+                        文件介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="chapter07/section02.html">
+            
+                
+                    <a href="../chapter07/section02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.2.</b>
+                        
+                        文件的打开和关闭
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="chapter07/section03.html">
+            
+                
+                    <a href="../chapter07/section03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.3.</b>
+                        
+                        文件的写入和读取
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="chapter07/section04.html">
+            
+                
+                    <a href="../chapter07/section04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.4.</b>
+                        
+                        csv文件的读取和写入
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="chapter07/section05.html">
+            
+                
+                    <a href="../chapter07/section05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.5.</b>
+                        
+                        往内存中写入数据
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="chapter07/section06.html">
+            
+                
+                    <a href="../chapter07/section06.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.6.</b>
+                        
+                        文件操作练习：制作文件备份
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7" data-path="chapter07/section07.html">
+            
+                
+                    <a href="../chapter07/section07.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.7.</b>
+                        
+                        文件的序列化和反序列化
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.8" data-path="chapter07/section08.html">
+            
+                
+                    <a href="../chapter07/section08.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.8.</b>
+                        
+                        异常介绍
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="chapter08/index.html">
+            
+                
+                    <a href="../chapter08/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        常见的内置模块
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1" data-path="chapter08/section01.html">
+            
+                
+                    <a href="../chapter08/section01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.1.</b>
+                        
+                        常见模块的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="chapter08/section02.html">
+            
+                
+                    <a href="../chapter08/section02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.2.</b>
+                        
+                        深拷贝与浅拷贝
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="chapter08/section03.html">
+            
+                
+                    <a href="../chapter08/section03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.3.</b>
+                        
+                        uuid
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="chapter09/index.html">
+            
+                
+                    <a href="../chapter09/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        面向对象基础
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.1" data-path="chapter09/section01.html">
+            
+                
+                    <a href="../chapter09/section01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.1.</b>
+                        
+                        面向对象介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="chapter09/section02.html">
+            
+                
+                    <a href="../chapter09/section02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.2.</b>
+                        
+                        类和对象
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="chapter09/section03.html">
+            
+                
+                    <a href="../chapter09/section03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.3.</b>
+                        
+                        面向对象基本语法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.4" data-path="chapter09/section04.html">
+            
+                
+                    <a href="../chapter09/section04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.4.</b>
+                        
+                        魔法方法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.5" data-path="chapter09/section05.html">
+            
+                
+                    <a href="../chapter09/section05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.5.</b>
+                        
+                        身份运算符
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.6" data-path="chapter09/section06.html">
+            
+                
+                    <a href="../chapter09/section06.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.6.</b>
+                        
+                        面向对象练习
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="chapter10/index.html">
+            
+                
+                    <a href="../chapter10/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.</b>
+                        
+                        面向对象高级
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1" data-path="chapter10/section01.html">
+            
+                
+                    <a href="../chapter10/section01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.1.</b>
+                        
+                        私有属性和方法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="chapter10/section02.html">
+            
+                
+                    <a href="../chapter10/section02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.2.</b>
+                        
+                        继承的概念
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="chapter10/section03.html">
+            
+                
+                    <a href="../chapter10/section03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.3.</b>
+                        
+                        继承的实现
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.4" data-path="chapter10/section04.html">
+            
+                
+                    <a href="../chapter10/section04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.4.</b>
+                        
+                        方法的重写
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.5" data-path="chapter10/section05.html">
+            
+                
+                    <a href="../chapter10/section05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.5.</b>
+                        
+                        私有成员的继承特点
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.6" data-path="chapter10/section06.html">
+            
+                
+                    <a href="../chapter10/section06.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.6.</b>
+                        
+                        多态
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.7" data-path="chapter10/section07.html">
+            
+                
+                    <a href="../chapter10/section07.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.7.</b>
+                        
+                        实例属性和类属性
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.8" data-path="chapter10/section08.html">
+            
+                
+                    <a href="../chapter10/section08.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.8.</b>
+                        
+                        类方法和静态方法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.9" data-path="chapter10/section09.html">
+            
+                
+                    <a href="../chapter10/section09.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.9.</b>
+                        
+                        new方法的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.10" data-path="chapter10/section10.html">
+            
+                
+                    <a href="../chapter10/section10.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.10.</b>
+                        
+                        单例设计模式
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.11" data-path="chapter10/section11.html">
+            
+                
+                    <a href="../chapter10/section11.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.11.</b>
+                        
+                        property属性的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.12" data-path="chapter10/section12.html">
+            
+                
+                    <a href="../chapter10/section12.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.12.</b>
+                        
+                        其他魔法属性和方法
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="11" data-path="chapter11/index.html">
+            
+                
+                    <a href="../chapter11/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.</b>
+                        
+                        异常概念
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="11.1" data-path="chapter11/section01.html">
+            
+                
+                    <a href="../chapter11/section01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.1.</b>
+                        
+                        处理异常
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11.2" data-path="chapter11/section02.html">
+            
+                
+                    <a href="../chapter11/section02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.2.</b>
+                        
+                        with关键字的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11.3" data-path="chapter11/section03.html">
+            
+                
+                    <a href="../chapter11/section03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.3.</b>
+                        
+                        自定义异常
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="12" data-path="chapter12/index.html">
+            
+                
+                    <a href="../chapter12/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.</b>
+                        
+                        模块和包
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="12.1" data-path="chapter12/section01.html">
+            
+                
+                    <a href="../chapter12/section01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.1.</b>
+                        
+                        导入模块
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12.2" data-path="chapter12/section02.html">
+            
+                
+                    <a href="../chapter12/section02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.2.</b>
+                        
+                        制作模块
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12.3" data-path="chapter12/section03.html">
+            
+                
+                    <a href="../chapter12/section03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.3.</b>
+                        
+                        模块中的all
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12.4" data-path="chapter12/section04.html">
+            
+                
+                    <a href="../chapter12/section04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.4.</b>
+                        
+                        Python中的包
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="13" data-path="chapter13/index.html">
+            
+                
+                    <a href="../chapter13/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>13.</b>
+                        
+                        正则表达式
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="13.1" data-path="chapter13/section01.html">
+            
+                
+                    <a href="../chapter13/section01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>13.1.</b>
+                        
+                        介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13.2" data-path="chapter13/section02.html">
+            
+                
+                    <a href="../chapter13/section02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>13.2.</b>
+                        
+                        正则查找
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13.3" data-path="chapter13/section03.html">
+            
+                
+                    <a href="../chapter13/section03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>13.3.</b>
+                        
+                        re.Match类
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13.4" data-path="chapter13/section04.html">
+            
+                
+                    <a href="../chapter13/section04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>13.4.</b>
+                        
+                        re.complie的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13.5" data-path="chapter13/section05.html">
+            
+                
+                    <a href="../chapter13/section05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>13.5.</b>
+                        
+                        正则修饰符
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13.6" data-path="chapter13/section06.html">
+            
+                
+                    <a href="../chapter13/section06.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>13.6.</b>
+                        
+                        正则模式
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13.7" data-path="chapter13/section07.html">
+            
+                
+                    <a href="../chapter13/section07.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>13.7.</b>
+                        
+                        正则替换
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13.8" data-path="chapter13/section08.html">
+            
+                
+                    <a href="../chapter13/section08.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>13.8.</b>
+                        
+                        贪婪模式和非贪婪模式
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="14" data-path="chapter14/index.html">
+            
+                
+                    <a href="../chapter14/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.</b>
+                        
+                        迭代器生成器
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="14.1" data-path="chapter14/section01.html">
+            
+                
+                    <a href="../chapter14/section01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.1.</b>
+                        
+                        迭代器
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="14.2" data-path="chapter14/section02.html">
+            
+                
+                    <a href="../chapter14/section02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.2.</b>
+                        
+                        生成器
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="15" data-path="chapter15/index.html">
+            
+                
+                    <a href="../chapter15/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>15.</b>
+                        
+                        加密方式
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="15.1" data-path="chapter15/section01.html">
+            
+                
+                    <a href="../chapter15/section01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>15.1.</b>
+                        
+                        base64编码
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="15.2" data-path="chapter15/section02.html">
+            
+                
+                    <a href="../chapter15/section02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>15.2.</b>
+                        
+                        常见加密算法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="15.3" data-path="chapter15/section03.html">
+            
+                
+                    <a href="../chapter15/section03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>15.3.</b>
+                        
+                        hashlib和hmac模块的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="15.4" data-path="chapter15/section04.html">
+            
+                
+                    <a href="../chapter15/section04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>15.4.</b>
+                        
+                        第三方加密模块介绍
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="16" data-path="chapter16/index.html">
+            
+                
+                    <a href="../chapter16/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>16.</b>
+                        
+                        网络编程
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="16.1" data-path="chapter16/section01.html">
+            
+                
+                    <a href="../chapter16/section01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>16.1.</b>
+                        
+                        网络通信概念
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="16.2" data-path="chapter16/section02.html">
+            
+                
+                    <a href="../chapter16/section02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>16.2.</b>
+                        
+                        IP地址
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="16.3" data-path="chapter16/section03.html">
+            
+                
+                    <a href="../chapter16/section03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>16.3.</b>
+                        
+                        网络通信方式
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="16.4" data-path="chapter16/section04.html">
+            
+                
+                    <a href="../chapter16/section04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>16.4.</b>
+                        
+                        端口
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="16.5" data-path="chapter16/section05.html">
+            
+                
+                    <a href="../chapter16/section05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>16.5.</b>
+                        
+                        socket概念
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="16.6" data-path="chapter16/section06/index.html">
+            
+                
+                    <a href="../chapter16/section06/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>16.6.</b>
+                        
+                        UDP协议
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="16.6.1" data-path="chapter16/section06/p01.html">
+            
+                
+                    <a href="../chapter16/section06/p01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>16.6.1.</b>
+                        
+                        UDP发送接受数据
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="16.6.2" data-path="chapter16/section06/p02.html">
+            
+                
+                    <a href="../chapter16/section06/p02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>16.6.2.</b>
+                        
+                        UDP端口绑定
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="16.7" data-path="chapter16/section07/index.html">
+            
+                
+                    <a href="../chapter16/section07/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>16.7.</b>
+                        
+                        TCP协议
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="16.7.1" data-path="chapter16/section07/p01.html">
+            
+                
+                    <a href="../chapter16/section07/p01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>16.7.1.</b>
+                        
+                        TCP客户端
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="16.7.2" data-path="chapter16/section07/p02.html">
+            
+                
+                    <a href="../chapter16/section07/p02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>16.7.2.</b>
+                        
+                        TCP服务器
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="16.7.3" data-path="chapter16/section07/p03.html">
+            
+                
+                    <a href="../chapter16/section07/p03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>16.7.3.</b>
+                        
+                        文件下载案例
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="17" data-path="chapter17/index.html">
+            
+                
+                    <a href="../chapter17/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>17.</b>
+                        
+                        常见第三方库介绍
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="17.1" data-path="chapter17/section01.html">
+            
+                
+                    <a href="../chapter17/section01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>17.1.</b>
+                        
+                        操作数据库
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="17.2" data-path="chapter17/section02.html">
+            
+                
+                    <a href="../chapter17/section02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>17.2.</b>
+                        
+                        Pillow的使用
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="18" data-path="other.html">
+            
+                
+                    <a href="../other.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>18.</b>
+                        
+                        附录：Python2和Python3的区别
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本书使用 GitBook 发布
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >Python基础</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="base64&#x7F16;&#x7801;">Base64&#x7F16;&#x7801;</h1>
+<p>Base64&#x662F;&#x4E00;&#x79CD;&#x7528;64&#x4E2A;&#x5B57;&#x7B26;&#x6765;&#x8868;&#x793A;&#x4EFB;&#x610F;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x636E;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x79F0;&#x4E3A;&#x5BC6;&#x7801;&#x5B66;&#x7684;&#x57FA;&#x77F3;&#x3002;&#x53EF;&#x4EE5;&#x5C06;&#x4EFB;&#x610F;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x636E;&#x8FDB;&#x884C;Base64&#x7F16;&#x7801;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x6570;&#x636E;&#x90FD;&#x80FD;&#x88AB;&#x7F16;&#x7801;&#x4E3A;&#x5E76;&#x53EA;&#x7528;65&#x4E2A;&#x5B57;&#x7B26;&#x5C31;&#x80FD;&#x8868;&#x793A;&#x7684;&#x6587;&#x672C;&#x6587;&#x4EF6;&#x3002;</p>
+<p>Base64&#x7801;&#x8868;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th><strong>&#x7D22;&#x5F15;</strong></th>
+<th><strong>&#x5BF9;&#x5E94;&#x5B57;&#x7B26;</strong></th>
+<th><strong>&#x7D22;&#x5F15;</strong></th>
+<th><strong>&#x5BF9;&#x5E94;&#x5B57;&#x7B26;</strong></th>
+<th><strong>&#x7D22;&#x5F15;</strong></th>
+<th><strong>&#x5BF9;&#x5E94;&#x5B57;&#x7B26;</strong></th>
+<th><strong>&#x7D22;&#x5F15;</strong></th>
+<th><strong>&#x5BF9;&#x5E94;&#x5B57;&#x7B26;</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td><strong>A</strong></td>
+<td>17</td>
+<td><strong>R</strong></td>
+<td>34</td>
+<td><strong>i</strong></td>
+<td>51</td>
+<td><strong>z</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td><strong>B</strong></td>
+<td>18</td>
+<td><strong>S</strong></td>
+<td>35</td>
+<td><strong>j</strong></td>
+<td>52</td>
+<td><strong>0</strong></td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>C</strong></td>
+<td>19</td>
+<td><strong>T</strong></td>
+<td>36</td>
+<td><strong>k</strong></td>
+<td>53</td>
+<td><strong>1</strong></td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>D</strong></td>
+<td>20</td>
+<td><strong>U</strong></td>
+<td>37</td>
+<td><strong>l</strong></td>
+<td>54</td>
+<td><strong>2</strong></td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>E</strong></td>
+<td>21</td>
+<td><strong>V</strong></td>
+<td>38</td>
+<td><strong>m</strong></td>
+<td>55</td>
+<td><strong>3</strong></td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>F</strong></td>
+<td>22</td>
+<td><strong>W</strong></td>
+<td>39</td>
+<td><strong>n</strong></td>
+<td>56</td>
+<td><strong>4</strong></td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>G</strong></td>
+<td>23</td>
+<td><strong>X</strong></td>
+<td>40</td>
+<td><strong>o</strong></td>
+<td>57</td>
+<td><strong>5</strong></td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>H</strong></td>
+<td>24</td>
+<td><strong>Y</strong></td>
+<td>41</td>
+<td><strong>p</strong></td>
+<td>58</td>
+<td><strong>6</strong></td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>I</strong></td>
+<td>25</td>
+<td><strong>Z</strong></td>
+<td>42</td>
+<td><strong>q</strong></td>
+<td>59</td>
+<td><strong>7</strong></td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>J</strong></td>
+<td>26</td>
+<td><strong>a</strong></td>
+<td>43</td>
+<td><strong>r</strong></td>
+<td>60</td>
+<td><strong>8</strong></td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>K</strong></td>
+<td>27</td>
+<td><strong>b</strong></td>
+<td>44</td>
+<td><strong>s</strong></td>
+<td>61</td>
+<td><strong>9</strong></td>
+</tr>
+<tr>
+<td>11</td>
+<td><strong>L</strong></td>
+<td>28</td>
+<td><strong>c</strong></td>
+<td>45</td>
+<td><strong>t</strong></td>
+<td>62</td>
+<td><strong>+</strong></td>
+</tr>
+<tr>
+<td>12</td>
+<td><strong>M</strong></td>
+<td>29</td>
+<td><strong>d</strong></td>
+<td>46</td>
+<td><strong>u</strong></td>
+<td>63</td>
+<td><strong>/</strong></td>
+</tr>
+<tr>
+<td>13</td>
+<td><strong>N</strong></td>
+<td>30</td>
+<td><strong>e</strong></td>
+<td>47</td>
+<td><strong>v</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>14</td>
+<td><strong>O</strong></td>
+<td>31</td>
+<td><strong>f</strong></td>
+<td>48</td>
+<td><strong>w</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>15</td>
+<td><strong>P</strong></td>
+<td>32</td>
+<td><strong>g</strong></td>
+<td>49</td>
+<td><strong>x</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>16</td>
+<td><strong>Q</strong></td>
+<td>33</td>
+<td><strong>h</strong></td>
+<td>50</td>
+<td><strong>y</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x539F;&#x7406;&#x4E86;&#x89E3;">&#x539F;&#x7406;(&#x4E86;&#x89E3;)</h2>
+<p>&#x8F6C;&#x7801;&#x7684;&#x6838;&#x5FC3;&#x5728;&#x4E8E;&#xFF1A; <code>3*8=4*6</code></p>
+<ul>
+<li><p>&#x8981;&#x8F6C;&#x5316;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x80FD;&#x88AB;3&#x6574;&#x9664;</p>
+<blockquote>
+<p>&#x8981;&#x5BF9;&#x5B57;&#x7B26;&#x4E32; &apos;abc&apos; &#x8FDB;&#x884C;Base64&#x52A0;&#x5BC6;&#xFF0C;&#x9700;&#x8981;&#x5148;&#x62FF;&#x5230; abc &#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x3002;abc &#x8F6C;&#x6362;&#x6210;&#x4E3A;&#x5B57;&#x8282;&#x5206;&#x522B;&#x5BF9;&#x5E94; 97,98,99</p>
+<p>&#x8F6C;&#x6362;&#x6210;&#x4E3A;&#x4E8C;&#x8FDB;&#x5236;&#xFF0C;&#x516B;&#x4E2A;&#x4E00;&#x4F4D;&#xFF1A; 01100001 01100010  01100011</p>
+<p>&#x5BF9;&#x4E8C;&#x8FDB;&#x5236;&#x91CD;&#x65B0;&#x7EC4;&#x5408;&#xFF0C;6&#x4E2A;&#x4E00;&#x7EC4;&#xFF1A;011000 010110 001001 100011</p>
+<p>&#x8F6C;&#x6362;&#x6210;&#x4E3A;&#x5341;&#x8FDB;&#x5236;:                           24         22            9          35</p>
+<p>&#x5BF9;&#x7167;Base64&#x7801;&#x8868;:           YWJj   </p>
+</blockquote>
+<p>&#x6240;&#x4EE5;&#xFF0C;&#x5B57;&#x7B26;&#x4E32; abc &#x8FDB;&#x884C;64&#x4E3A;&#x52A0;&#x5BC6;&#x4EE5;&#x540E;&#x5C31;&#x662F; YWJj</p>
+</li>
+<li><p>&#x8981;&#x8F6C;&#x6362;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x9664;&#x4EE5;3&#x4F59;2</p>
+<blockquote>
+<p>&#x5C06;&#x5B57;&#x7B26;&#x4E32; ab &#x8FDB;&#x884C;Base64&#x52A0;&#x5BC6;</p>
+<p>&#x8F6C;&#x6362;&#x6210;&#x4E3A;&#x4E8C;&#x8FDB;&#x5236;&#xFF0C;&#x516B;&#x4E2A;&#x4E00;&#x4F4D;&#xFF1A; 01100001 01100010</p>
+<p>&#x5BF9;&#x4E8C;&#x8FDB;&#x5236;&#x91CD;&#x65B0;&#x7EC4;&#x5408;&#xFF0C;6&#x4E2A;&#x4E00;&#x7EC4;: 011000 010110 0010<strong>00</strong> &#x6700;&#x540E;&#x53EA;&#x5269;&#x4E0B;&#x56DB;&#x4F4D;&#xFF0C;&#x9700;&#x8981;&#x5728;&#x6700;&#x540E;&#x8865;0</p>
+<p>&#x8F6C;&#x6362;&#x6210;&#x4E3A;&#x5341;&#x8FDB;&#x5236;&#xFF1A;                  24     22     8</p>
+<p>&#x5BF9;&#x7167;Base64&#x7801;&#x8868;&#xFF1A;              YWI<strong>=</strong>    &#x4F7F;&#x7528;&#x4E00;&#x4E2A; =  &#x6765;&#x8868;&#x793A;&#xFF0C;&#x6700;&#x540E;&#x9762;&#x8865;&#x4E86;&#x4E24;&#x4E2A;0</p>
+</blockquote>
+</li>
+<li><p>&#x8981;&#x8F6C;&#x5316;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x9664;&#x4EE5;3&#x4F59;1</p>
+<blockquote>
+<p>&#x5C06;&#x5B57;&#x7B26;&#x4E32; a &#x8FDB;&#x884C; Base64&#x52A0;&#x5BC6;</p>
+<p>&#x8F6C;&#x6362;&#x6210;&#x4E3A;&#x4E8C;&#x8FDB;&#x5236;&#xFF0C;&#x516B;&#x4E2A;&#x4E00;&#x4F4D;&#xFF1A;   01100001</p>
+<p>&#x5BF9;&#x4E8C;&#x8FDB;&#x5236;&#x91CD;&#x65B0;&#x7EC4;&#x5408;&#xFF0C;6&#x4E2A;&#x4E00;&#x7EC4;:   011000 01<strong>0000</strong>  &#x6700;&#x540E;&#x53EA;&#x5269;&#x4E0B;&#x4E24;&#x4F4D;&#xFF0C;&#x9700;&#x8981;&#x5728;&#x540E;&#x9762;&#x8865;&#x56DB;&#x4E2A;0</p>
+<p>&#x8F6C;&#x6362;&#x6210;&#x4E3A;&#x5341;&#x8FDB;&#x5236;&#xFF1A;                     24           16</p>
+<p>&#x5BF9;&#x7167;Base64&#x7801;&#x8868;&#xFF1A;                      YQ<strong>==</strong>  &#x4F7F;&#x7528;&#x4E24;&#x4E2A; = &#x6765;&#x8868;&#x793A;&#xFF0C;&#x6700;&#x540E;&#x9762;&#x8865;&#x4E86;&#x56DB;&#x4E2A;0</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="python&#x4E2D;&#x5B9E;&#x73B0;base64&#x7F16;&#x7801;">Python&#x4E2D;&#x5B9E;&#x73B0;Base64&#x7F16;&#x7801;</h2>
+<p>Python&#x4E2D;&#x7684;&#x52A0;&#x5BC6;&#x7B97;&#x6CD5;&#xFF0C;&#x90FD;&#x662F;&#x5148;&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x6362;&#x6210;&#x4E3A;&#x4E8C;&#x8FDB;&#x5236;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x5BF9;&#x4E8C;&#x8FDB;&#x5236;&#x8FDB;&#x884C;&#x52A0;&#x5BC6;&#x3002;&#x5728;&#x8FDB;&#x884C;base64&#x7F16;&#x7801;&#x524D;&#xFF0C;&#x6211;&#x4EEC;&#x4E5F;&#x9700;&#x8981;&#x5148;&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x6362;&#x6210;&#x4E3A;Bytes,&#x7136;&#x540E;&#x518D;&#x8FDB;&#x884C;&#x7F16;&#x7801;&#x3002;</p>
+<p>&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x548C;<code>Bytes</code>&#x4E92;&#x76F8;&#x8F6C;&#x6362;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>encode()</code>&#x548C;<code>decode()</code>&#x65B9;&#x6CD5;&#x3002;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<pre><code class="lang-python">str1 = <span class="hljs-string">&apos;&#x4F60;&#x597D;&apos;</span>
+bs = str1.encode() <span class="hljs-comment"># &#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x6362;&#x6210;&#x4E3A;&#x4E8C;&#x8FDB;&#x5236;&#x5217;&#x8868;</span>
+print(bs) <span class="hljs-comment"># b&apos;\xe4\xbd\xa0\xe5\xa5\xbd&apos;</span>
+print(type(bs)) <span class="hljs-comment"># bytes</span>
+
+bs.decode()  <span class="hljs-comment"># &#x5C06;&#x4E8C;&#x8FDB;&#x5236;&#x5217;&#x8868;&#x8F6C;&#x6362;&#x6210;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;</span>
+</code></pre>
+<p>&#x5BF9;Bytes&#x8FDB;&#x884C;Base64&#x7F16;&#x7801;:</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> base64
+
+str1 = <span class="hljs-string">&apos;&#x4F60;&#x597D;&apos;</span>
+str_bytes = str1.encode()  <span class="hljs-comment"># &#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x6362;&#x6210;&#x4E3A;bytes</span>
+b64_value = base64.b64encode() <span class="hljs-comment"># &#x5C06;bytes&#x8FDB;&#x884C;bae64&#x7F16;&#x7801;</span>
+print(b64_value)
+value = base64.b64decode(b64_value)  <span class="hljs-comment"># &#x5C06;base64&#x7F16;&#x7801;&#x540E;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x8FDB;&#x884C;&#x89E3;&#x7801;&#xFF0C;&#x5F97;&#x5230;bytes</span>
+print(value.decode()) <span class="hljs-comment"># &#x5C06;bytes&#x89E3;&#x7801;&#x6210;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;</span>
+</code></pre>
+<p>Base64&#x4E25;&#x683C;&#x610F;&#x4E49;&#x4E0A;&#x6765;&#x8BF4;&#xFF0C;&#x53EA;&#x662F;&#x4E00;&#x79CD;&#x7F16;&#x7801;&#x683C;&#x5F0F;&#xFF0C;&#x7B97;&#x4E0D;&#x4E0A;&#x662F;&#x52A0;&#x5BC6;&#x7B97;&#x6CD5;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x7684;&#x7F16;&#x7801;&#x683C;&#x5F0F;&#x662F;&#x516C;&#x5F00;&#x53EF;&#x9006;&#x7684;&#x3002;</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../chapter15/index.html" class="navigation navigation-prev " aria-label="Previous page: 加密方式"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../chapter15/section02.html" class="navigation navigation-next " aria-label="Next page: 常见加密算法"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-copy-code-button/toggle.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"prism":{},"splitter":{},"copy-code-button":{},"toggle-chapters":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+<!-- body:end -->
+    </body>
+    <!-- End of book Python基础 -->
+<!-- End of book Python基础 -->
+</html>
